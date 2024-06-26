@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
     "target": "es2016",
-    "module": "commonjs",
+    "module": "ESNext",
     "jsx": "react",
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
+    "strict": true
   },
   "display": "Recommended",
   "$schema": "https://json.schemastore.org/tsconfig"
