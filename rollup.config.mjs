@@ -6,7 +6,7 @@ import packageJson from './package.json' with { type: 'json' }
 
 export default [
   {
-    input: 'src/componment/index.tsx',
+    input: 'src/component/index.tsx',
     output: [
       {
         file: packageJson.main,
@@ -19,7 +19,7 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: [resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' })]
+    plugins: [resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), babel({})]
   },
   {
     input: 'dist/esm/types/index.d.ts',
