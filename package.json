@@ -4,7 +4,10 @@
   "description": "react three option toggle switch",
   "scripts": {
     "rollup": "rollup -c",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
+    "format": "prettier --write '**/*.{ts,tsx,json}",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "react",
@@ -13,7 +16,7 @@
     "triple toggle switch"
   ],
   "author": "Robert-LC (https://github.com/Robert-LC)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
