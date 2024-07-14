@@ -1,0 +1,8 @@
+.eslintignore
+.eslintrc.json
+.gitignore
+.prettierignore
+.prettierrc.json
+jest.config.json
+rollup.config.mjs
+tsconfig.json
