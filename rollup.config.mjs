@@ -1,6 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
+import terser from '@rollup/plugin-terser'
 import dts from 'rollup-plugin-dts'
 import babel from '@rollup/plugin-babel'
 import packageJson from './package.json' with { type: 'json' }
@@ -25,7 +26,8 @@ export default [
         file: 'dist/bundle.js',
         format: 'iife',
         sourcemap: true,
-        globals: { react: 'React', 'react-dom': 'ReactDOM' }
+        globals: { react: 'React', 'react-dom': 'ReactDOM' },
+        plugins: [terser()]
       }
     ],
     plugins: [
@@ -43,7 +45,7 @@ export default [
     input: 'dist/esm/types/index.d.ts',
     output: [
       { file: 'dist/index.d.ts', format: 'esm' },
-      { file: 'dist/index.cjs.d.ts', format: 'cjs' }
+      { file: 'dist/index.d.ts', format: 'cjs' }
     ],
     plugins: [dts()]
   }
